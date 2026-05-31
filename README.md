@@ -271,6 +271,40 @@ Recommended screenshots for submission:
 
 Save screenshots in the `screenshots/` folder.
 
-## 12. Author
+## 12. Final Checklist Before Submission
+
+Run these commands and make sure they work:
+
+```bash
+docker compose up --build
+docker ps
+curl http://localhost:5000/health
+curl http://localhost:5000/books
+bash scripts/test_api.sh
+```
+
+Open Adminer:
+
+```text
+http://localhost:8080
+```
+
+Login details:
+
+| Field | Value |
+| --- | --- |
+| System | `PostgreSQL` |
+| Server | `db` |
+| Username | `library_user` |
+| Password | `library_password` |
+| Database | `library_db` |
+
+After logging in, confirm these tables exist:
+
+- `books`
+- `users`
+- `loans`
+
+## 13. Author
 
 Prepared as a Docker Compose final project for an academic library management use case.
